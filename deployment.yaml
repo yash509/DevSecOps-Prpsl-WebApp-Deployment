@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: prpsl-app-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: prpsl-app
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: prpsl-app
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: prpsl-app
+        image: yash5090/prpsl-app:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
